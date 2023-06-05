@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Leitor de texto
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div class="container">
+  <form [formGroup]="formText">
+
+    <ion-textarea #text fill="outline" [autoGrow]="true"
+                  placeholder="Digite um texto">
+
+    </ion-textarea>
+    <ion-item>
+    <ion-button (click)="reader(text)">
+      <ion-icon name="book-outline"></ion-icon>
+      Ler
+    </ion-button>
+    <ion-button (click)="limpar(text)" color="danger">
+      <ion-icon name="trash-outline"></ion-icon> Limpar
+    </ion-button>
+      <ion-button (click)="stoping()" color="danger">
+        <ion-icon name="hand-right-outline"></ion-icon> Parar
+      </ion-button>
+    </ion-item>
+  </form>
+</div>
+</ion-content>

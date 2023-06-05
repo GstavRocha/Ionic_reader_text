@@ -1,0 +1,7 @@
+{
+  "name": "Ionic Text Reader",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
