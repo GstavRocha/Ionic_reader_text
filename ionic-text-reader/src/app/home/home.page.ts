@@ -18,12 +18,18 @@ export class HomePage {
     }
     reader(text: IonTextarea): any{
       let texto = JSON.stringify(text.value)
-      this.ls.readerText(texto)
+      return this.ls.readerText(texto)
     }
     stoping(){
-      this.ls.stopText()
+      return this.ls.stopText()
     }
     limpar(text: IonTextarea){
       this.ls.cleanning(text);
+    }
+    selectTaxa(event: Event){
+      this.ls.changeTaxa(event);
+    }
+    selectTone(event: Event){
+      this.ls.changeTone(event);
     }
 }

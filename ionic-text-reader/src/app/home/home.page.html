@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
-      Leitor de texto
+      TEXT READER
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -15,15 +15,22 @@
     </ion-textarea>
     <ion-item>
     <ion-button (click)="reader(text)">
-      <ion-icon name="book-outline"></ion-icon>
-      Ler
+      <ion-icon name="book-outline"></ion-icon>read
     </ion-button>
     <ion-button (click)="limpar(text)" color="danger">
-      <ion-icon name="trash-outline"></ion-icon> Limpar
+      <ion-icon name="trash-outline"></ion-icon>clear
     </ion-button>
       <ion-button (click)="stoping()" color="danger">
-        <ion-icon name="hand-right-outline"></ion-icon> Parar
+        <ion-icon name="hand-right-outline"></ion-icon>stop
       </ion-button>
+    </ion-item>
+    <ion-item>
+      <ion-label> Rate </ion-label>
+      <ion-range min="0.0" max="2.0" pin="true" color="primary" (ionChange)="selectTaxa($event)"></ion-range>
+    </ion-item>
+    <ion-item>
+      <ion-label> Tone </ion-label>
+      <ion-range min="0.0" max="4.0" pin="true"  color="primary" (ionChange)="selectTone($event)"></ion-range>
     </ion-item>
   </form>
 </div>
